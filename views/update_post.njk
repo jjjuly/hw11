@@ -1,0 +1,10 @@
+{% extends './layout.njk' %}
+{% block content %}
+	<p><b>Редактирование поста</b></p>
+	<form action="/updated_post" method="post">
+		<input type="hidden" name="id" value="<# post._id #>">
+		<input type="text" name="title" placeholder="Заголовок" value="<# post.title #>"><br>
+		<textarea name="text"><# post.text #></textarea><br>
+		<input type="submit" name="save">
+	</form>
+{% endblock %}	

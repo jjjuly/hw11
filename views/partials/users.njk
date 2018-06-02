@@ -1,0 +1,16 @@
+<div>
+	<p>
+		<b>id: <# user._id #></b><br>
+		name: <# user.name #><br>
+		email: <# user.email #><br>
+		age: <# user.age #>
+	</p>
+	<form action="/delete_user" method="post">
+		<input type="hidden" name="id" value="<# user._id #>"></input>
+		<input type="submit" name="<# user._id #>" value="Удалить">
+	</form>
+	<form action="/update_user" method="post">
+		<input type="hidden" name="id" value="<# user._id #>"></input>
+		<input type="submit" name="update" value="Редактировать">
+	</form>
+</div>

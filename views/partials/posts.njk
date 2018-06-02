@@ -1,0 +1,15 @@
+	<div>
+		<p>
+			<b>id: <# post._id #></b><br>
+			title: <# post.title #><br>
+			text: <# post.text #>
+		</p>
+		<form action="/delete_post" method="post">
+			<input type="hidden" name="id" value="<# post._id #>"></input>
+			<input type="submit" name="<# post._id #>" value="Удалить">
+		</form>
+		<form action="/update_post" method="post">
+			<input type="hidden" name="id" value="<# post._id #>"></input>
+			<input type="submit" name="update" value="Редактировать">
+		</form>
+	</div>

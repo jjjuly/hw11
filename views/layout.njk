@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<p><a href="http://localhost:3333">Home</a></p>
+	{% include './partials/header.njk' %}
+	<p style="color: red"><# errorValidation #></p>
+	{% block content %}
+	{% endblock %}
+</body>
+
+<style type="text/css">
+	div {
+		margin-top: 25px;
+	}
+	p {
+		margin: 10px 0;
+	}
+</style>
+
+</html>

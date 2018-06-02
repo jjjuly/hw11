@@ -1,0 +1,15 @@
+{% extends './layout.njk' %}
+{% block content %}
+	<p><b>Cоздание нового пользователя</b></p>
+	<form action="/create_user" method="post">
+		<input type="text" name="name" placeholder="Имя"><br>
+		<input type="email" name="email" placeholder="email"><br>
+		<input type="number" name="age" placeholder="Возраст"><br>
+		<input type="submit" name="save">
+	</form>
+	{% for user in users %}
+		<div>{% include './partials/users.njk' %}</div>	
+	{% endfor %}
+	<# iframe | safe #>
+
+{% endblock %}	

@@ -1,0 +1,10 @@
+{% extends './layout.njk' %}
+{% block content %}
+	<p><b>Изменение данных пользователя</b></p>
+	<form action="/updated_user" method="post">
+		<input type="hidden" name="id" value="<# user._id #>">
+		<input type="text" name="name" placeholder="Имя" value="<# user.name #>"><br>
+		<input type="number" name="age" placeholder="Возраст" value="<# user.age #>"><br>
+		<input type="submit" name="save">
+	</form>
+{% endblock %}	
